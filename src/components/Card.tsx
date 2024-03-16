@@ -18,8 +18,7 @@ function Card({result}:  CardProps) {
                 height={300} 
                 className='sm:rounded-t-lg group-hover:opacity-75 transition-opacity duration-300'
             />
-        </Link>
-        <div className='p-2'>
+            <div className='p-2'>
             <p className='line-clamp-2 text-md'>{result?.overview || 'NA'}</p>
             <h2 className='text-lg font-bold truncate'>{result?.title || result?.name || 'NA'}</h2>
             <p className='flex items-center'>
@@ -28,6 +27,7 @@ function Card({result}:  CardProps) {
                 {result?.vote_count}({result?.vote_average})
             </p>
         </div>
+        </Link>
 
     </div>
   )
