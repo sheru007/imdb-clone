@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from './Card'
 
 type ResultsProps = {
     results: any
@@ -6,12 +7,10 @@ type ResultsProps = {
 
 function Results({results}: ResultsProps) {
   return (
-    <div>
+    <div className='sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 max-w-6xl mx-auto py-4'>
         {
             results.map((movie: any) => {
-                return (<div key={movie.id}>
-                    <h2>{movie.original_title}</h2>
-                </div>)
+                return <Card key={movie.id} result={movie} />
             })
         }
     </div>
